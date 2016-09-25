@@ -31,35 +31,21 @@ public class TTTMainActivity extends GameMainActivity {
 		// yellow-on-blue GUI
 		playerTypes.add(new GamePlayerType("Local Human Player (blue-yellow)") {
 			public GamePlayer createPlayer(String name) {
-				return new TTTHumanPlayer1(name);
+				return new TTTHumanPlayer1(name, R.layout.ttt_human_player1and2a);
 			}
 		});
 		
 		// red-on-yellow GUI
 		playerTypes.add(new GamePlayerType("Local Human Player (yellow-red)") {
 			public GamePlayer createPlayer(String name) {
-				return new TTTHumanPlayer2(name);
+				return new TTTHumanPlayer1(name, R.layout.ttt_human_player2a);
 			}
 		});
 
 		// game of 33
 		playerTypes.add(new GamePlayerType("Local Human Player (game of 33)") {
 			public GamePlayer createPlayer(String name) {
-				return new TTTHumanPlayer3(name);
-			}
-		});
-
-		// surfaceView version
-		playerTypes.add(new GamePlayerType("Local Human Player (SurfaceView, blue)") {
-			public GamePlayer createPlayer(String name) {
-				return new TTTHumanPlayer1a(name, R.layout.ttt_human_player1and2a);
-			}
-		});
-
-		// surfaceView version
-		playerTypes.add(new GamePlayerType("Local Human Player (SurfaceView, yellow)") {
-			public GamePlayer createPlayer(String name) {
-				return new TTTHumanPlayer1a(name, R.layout.ttt_human_player2a);
+				return new TTTHumanPlayer2(name);
 			}
 		});
 		
@@ -81,8 +67,8 @@ public class TTTMainActivity extends GameMainActivity {
 		GameConfig defaultConfig = new GameConfig(playerTypes, 2,2, "Tic-Tac-Toe", PORT_NUMBER);
 
 		// Add the default players
-		defaultConfig.addPlayer("Human", 3); // yellow-on-blue GUI
-		defaultConfig.addPlayer("Computer", 6); // dumb computer player
+		defaultConfig.addPlayer("Human", 0); // yellow-on-blue GUI
+		defaultConfig.addPlayer("Computer", 3); // dumb computer player
 
 		// Set the initial information for the remote player
 		defaultConfig.setRemoteData("Remote Player", "", 1); // red-on-yellow GUI
