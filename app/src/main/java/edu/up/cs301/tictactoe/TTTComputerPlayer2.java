@@ -1,5 +1,6 @@
 package edu.up.cs301.tictactoe;
 
+import edu.up.cs301.game.GameComputerPlayer;
 import edu.up.cs301.game.infoMsg.GameInfo;
 import android.graphics.Point;
 
@@ -8,15 +9,19 @@ import android.graphics.Point;
  * or loss, and plays appropriately.  If there is not an immediate win
  * (which it plays) or loss (which it blocks), it moves randomly.
  * 
- * I have seen some evidence that it occasionally does not block when
- * it should. Timing-related?
- * 
  * @author Steven R. Vegdahl 
- * @version July 2013
+ * @version September 2016
  * 
  */
-public class TTTComputerPlayer2 extends TTTComputerPlayer
+public class TTTComputerPlayer2 extends GameComputerPlayer
 {
+	/**
+	 * instance variable that tells which piece am I playing ('X' or 'O').
+	 * This is set once the player finds out which player they are, in the
+	 * 'initAfterReady' method.
+	 */
+	protected char piece;
+
 	/**
 	 * constructor for a computer player
 	 * 
@@ -41,7 +46,7 @@ public class TTTComputerPlayer2 extends TTTComputerPlayer
 	 * Called when the player receives a game-state (or other info) from the
 	 * game.
 	 * 
-	 * @param gameInfo
+	 * @param info
 	 * 		the message from the game
 	 */
 	@Override

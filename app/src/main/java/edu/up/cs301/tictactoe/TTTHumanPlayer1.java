@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.TextView;
 import edu.up.cs301.animation.AnimationSurface;
 import edu.up.cs301.animation.Animator;
+import edu.up.cs301.game.GameHumanPlayer;
 import edu.up.cs301.game.GameMainActivity;
 import edu.up.cs301.game.R;
 import edu.up.cs301.game.infoMsg.GameInfo;
@@ -27,7 +28,7 @@ import edu.up.cs301.game.infoMsg.NotYourTurnInfo;
  * @author Steven R. Vegdahl
  * @version September 2016
  */
-public class TTTHumanPlayer1 extends TTTHumanPlayer implements View.OnTouchListener {
+public class TTTHumanPlayer1 extends GameHumanPlayer implements View.OnTouchListener {
 
     // the current activity
     private Activity myActivity;
@@ -36,10 +37,10 @@ public class TTTHumanPlayer1 extends TTTHumanPlayer implements View.OnTouchListe
     private TTTSurfaceView surfaceView;
 
     // the state
-    TTTState state;
+    private TTTState state;
 
     // the ID for the layout to use
-    int layoutId;
+    private int layoutId;
 
     /**
      * constructor

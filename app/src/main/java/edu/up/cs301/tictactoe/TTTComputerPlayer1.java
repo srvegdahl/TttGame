@@ -1,5 +1,6 @@
 package edu.up.cs301.tictactoe;
 
+import edu.up.cs301.game.GameComputerPlayer;
 import edu.up.cs301.game.infoMsg.GameInfo;
 import edu.up.cs301.game.infoMsg.NotYourTurnInfo;
 
@@ -10,7 +11,7 @@ import edu.up.cs301.game.infoMsg.NotYourTurnInfo;
  * @author Steven R. Vegdahl
  * @versio2 July 2013 
  */
-public class TTTComputerPlayer1 extends TTTComputerPlayer
+public class TTTComputerPlayer1 extends GameComputerPlayer
 {
     /*
      * Constructor for the TTTComputerPlayer1 class
@@ -24,7 +25,7 @@ public class TTTComputerPlayer1 extends TTTComputerPlayer
      * Called when the player receives a game-state (or other info) from the
      * game.
      * 
-     * @param gameInfo
+     * @param info
      * 		the message from the game
      */
     @Override

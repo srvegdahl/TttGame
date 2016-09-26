@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TttGameDemo.iml" filepath="$PROJECT_DIR$/TttGameDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TttGame.iml" filepath="$PROJECT_DIR$/TttGame.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -22,7 +22,7 @@ import edu.up.cs301.game.util.FlashSurfaceView;
  *
  *
  */
-public class TTTSurfaceView2 extends TTTSurfaceView {
+public class TTTSurfaceViewFlipped extends TTTSurfaceView {
 
     /*
 	 * Instance variables
@@ -33,7 +33,7 @@ public class TTTSurfaceView2 extends TTTSurfaceView {
      *
      * @param context - a reference to the activity this animation is run under
      */
-    public TTTSurfaceView2(Context context) {
+    public TTTSurfaceViewFlipped(Context context) {
         super(context);
     }// ctor
 
@@ -44,7 +44,7 @@ public class TTTSurfaceView2 extends TTTSurfaceView {
      * @param context - a reference to the activity this animation is run under
      * @param attrs   - set of attributes passed from system
      */
-    public TTTSurfaceView2(Context context, AttributeSet attrs) {
+    public TTTSurfaceViewFlipped(Context context, AttributeSet attrs) {
         super(context, attrs);
     }// ctor
 

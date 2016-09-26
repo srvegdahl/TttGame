@@ -31,14 +31,14 @@ public class TTTMainActivity extends GameMainActivity {
 		// yellow-on-blue GUI
 		playerTypes.add(new GamePlayerType("Local Human Player (blue-yellow)") {
 			public GamePlayer createPlayer(String name) {
-				return new TTTHumanPlayer1(name, R.layout.ttt_human_player1and2a);
+				return new TTTHumanPlayer1(name, R.layout.ttt_human_player1);
 			}
 		});
 		
 		// red-on-yellow GUI
 		playerTypes.add(new GamePlayerType("Local Human Player (yellow-red)") {
 			public GamePlayer createPlayer(String name) {
-				return new TTTHumanPlayer1(name, R.layout.ttt_human_player2a);
+				return new TTTHumanPlayer1(name, R.layout.ttt_human_player1_flipped);
 			}
 		});
 

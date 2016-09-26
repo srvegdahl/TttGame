@@ -1,12 +1,13 @@
 package edu.up.cs301.tictactoe;
 
 import android.graphics.Color;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import edu.up.cs301.game.GameHumanPlayer;
 import edu.up.cs301.game.GameMainActivity;
 import edu.up.cs301.game.R;
 import edu.up.cs301.game.infoMsg.GameInfo;
@@ -20,7 +21,7 @@ import edu.up.cs301.game.infoMsg.NotYourTurnInfo;
  * @author Steven R. Vegdahl 
  * @version July 2013
  */
-public class TTTHumanPlayer2 extends TTTHumanPlayer implements TTTPlayer, OnClickListener {
+public class TTTHumanPlayer2 extends GameHumanPlayer implements OnClickListener {
 	
 	// the activity under which we're running
 	GameMainActivity myActivity = null;
@@ -167,7 +168,7 @@ public class TTTHumanPlayer2 extends TTTHumanPlayer implements TTTPlayer, OnClic
 		myActivity = activity;
 
 		// Load the layout resource for the new configuration
-		activity.setContentView(R.layout.ttt_human_player3);
+		activity.setContentView(R.layout.ttt_human_player2);
 		
 		// initialize the button-array
 		initializeButtons();

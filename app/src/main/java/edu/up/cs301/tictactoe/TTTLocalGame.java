@@ -13,7 +13,7 @@ import edu.up.cs301.game.infoMsg.IllegalMoveInfo;
  * @version July 2013
  */
 
-public class TTTLocalGame extends LocalGame implements TTTGame {
+public class TTTLocalGame extends LocalGame {
 
 	// the game's state
 	protected TTTState state;
