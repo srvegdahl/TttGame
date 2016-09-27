@@ -42,15 +42,12 @@ public class TTTSurfaceView extends FlashSurfaceView {
     private final static float SQUARE_DELTA_PERCENT = SQUARE_SIZE_PERCENT
             + LINE_WIDTH_PERCENT; // distance from left (or top) edge of square to the next one
 
-    	/*
+    /*
 	 * Instance variables
 	 */
 
     // the game's state
     protected TTTState state;
-
-    // the current activity
-    private Activity myActivity;
 
     // the offset from the left and top to the beginning of our "middle square"; one
     // of these will always be zero
@@ -88,15 +85,8 @@ public class TTTSurfaceView extends FlashSurfaceView {
      */
     private void init() {
         setBackgroundColor(backgroundColor());
-//        reInit();
     }// init
 
-//    /**
-//     * marks surface view for resizing
-//     */
-//    public void reInit() {
-//        fullSquare = -1;
-//    }
 
     public void setState(TTTState state) {
         this.state = state;
@@ -326,7 +316,6 @@ public class TTTSurfaceView extends FlashSurfaceView {
         return null;
     }
 
-
     /**
      * helper-method to convert from a percentage to a horizontal pixel location
      *
@@ -335,7 +324,7 @@ public class TTTSurfaceView extends FlashSurfaceView {
      * @return
      * 		the pixel location that corresponds to that percentage
      */
-    protected float h(float percent) {
+    private float h(float percent) {
         return hBase + percent * fullSquare / 100;
     }
 
@@ -347,7 +336,7 @@ public class TTTSurfaceView extends FlashSurfaceView {
      * @return
      * 		the pixel location that corresponds to that percentage
      */
-    protected float v(float percent) {
+    private float v(float percent) {
         return vBase + percent * fullSquare / 100;
     }
 

@@ -36,9 +36,6 @@ public class TTTHumanPlayer1 extends GameHumanPlayer implements View.OnTouchList
     // the surface view
     private TTTSurfaceView surfaceView;
 
-    // the state
-    private TTTState state;
-
     // the ID for the layout to use
     private int layoutId;
 
@@ -74,9 +71,7 @@ public class TTTHumanPlayer1 extends GameHumanPlayer implements View.OnTouchList
             // if we do not have a TTTState, ignore
             return;
         else {
-            // update our 'state' variable with the new state
-            this.state = (TTTState) info;
-            surfaceView.setState(state);
+            surfaceView.setState((TTTState)info);
             surfaceView.invalidate();
             Log.i("human player", "receiving");
         }
@@ -97,10 +92,6 @@ public class TTTHumanPlayer1 extends GameHumanPlayer implements View.OnTouchList
         surfaceView = (TTTSurfaceView)myActivity.findViewById(R.id.surfaceView);
         Log.i("set listener","OnTouch");
         surfaceView.setOnTouchListener(this);
-        if (state != null) {
-            receiveInfo(state);
-        }
-        surfaceView.setState(state);
     }
 
     /**
