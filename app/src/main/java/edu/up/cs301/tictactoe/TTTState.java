@@ -8,7 +8,7 @@ import edu.up.cs301.game.infoMsg.GameState;
  * a player wants to enquire about the state of the game.  (E.g., to display
  * it, or to help figure out its next move.)
  * 
- * @author Steven R. Vegdahl 
+ * @author Steven R. Vegdahl
  * @version July 2013
  */
 public class TTTState extends GameState
