@@ -1,16 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 18
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "edu.up.cs301.game"
         minSdkVersion 16
-        targetSdkVersion 21
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_5
-            targetCompatibility JavaVersion.VERSION_1_5
-        }
+        targetSdkVersion 27
     }
     buildTypes {
         release {
@@ -23,5 +19,5 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:18.0.0'
+    implementation 'com.android.support:support-v4:27.1.1'
 }
